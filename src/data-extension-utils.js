@@ -16,7 +16,7 @@
             moreData = false;
             if (reqID == null) {
                 data = prox.retrieve("DataExtensionObject[" + dataExtensionName + "]", cols);
-            } 
+            }
             else {
                 data = prox.getNextBatch("DataExtensionObject["+ dataExtensionName +"]", reqID);
             }
@@ -28,7 +28,7 @@
                 SaveLog('Info', 'Found ' + data.Results.length + ' records.');
 
                 for (i = 0; i < data.Results.length; i++) {
-  		    var currentObject = {};
+                    var currentObject = {};
                     for (j = 0; j < data.Results[i].Properties.length; j++) {
                         currentObject[data.Results[i].Properties[j].Name] = data.Results[i].Properties[j].Value;
                     }
