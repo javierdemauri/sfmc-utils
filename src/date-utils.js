@@ -14,7 +14,10 @@
         var minutes = d.getMinutes();
         minutes = ("0" + minutes).slice(-2);
 
-        var datestring = d.getFullYear()  + "-" + month + "-" + days + "T" + hours + ":" + minutes + ":00.000Z";
+        var seconds = d.getSeconds();
+        seconds = ("0" + seconds).slice(-2);
+
+        var datestring = d.getFullYear()  + "-" + month + "-" + days + "T" + hours + ":" + minutes + ":" + seconds + ".000Z";
 
         return datestring;
     }
